@@ -21,6 +21,7 @@ fn main() -> std::io::Result<()> {
     println!("Connected to the server!");
 
     let unmsg = "Hello from client!";
+    println!("Data to be send {}",unmsg);
     let msg = encrypt_caeser(unmsg,3);
     stream.write(msg.as_bytes())?;
 
